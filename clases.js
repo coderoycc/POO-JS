@@ -40,3 +40,15 @@ mi_coche.arrancar()
 mi_coche.parar()
 mi_coche.recorridoMas()
 console.log(mi_coche.recorrido)
+
+//USANDO PROTOTYPE
+//Agregamos una nueva propiedad
+Coche.prototype.ruedas = 4
+console.log(mi_coche.ruedas)
+
+//Agregamos un metodo
+Coche.prototype.tunear = function(color){
+  this._color = color
+}
+mi_coche.tunear('Rosado')
+console.log(mi_coche.obtenerDatos)

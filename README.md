@@ -87,3 +87,46 @@ Coche.prototype.kilometraje = function(){
 }
 ``` 
 Así tambien podemos alterar nuestros constructores que vienen con JavaScript como añadir un nuevo método de String para una funcionalidad diferente, pero siempre usando el constructor. `String.prototype.nuevo = function() { return this + "XD" }`
+
+## Asociación - Agregación - Composición
+Son principios básicos de la Programación Orientada a Objetos
+
+* La asociación se refiere a relacionar un objeto con otro.
+* Agregación es donde un objeto puede estar compuesto por otros objetos que son independientes, es decir, que si el objeto independiente se describe por si mismo.
+* Composición es lo contrario a la agregación, pues un objeto es compuesto por otros objetos de manera que si se quita un de estos ambos quedan sin funcionamiento.
+**Ver ejemplos en el archivo de principiosPOO**
+
+## Herencia
+Es donde un objeto mayor (PADRE) cuenta con una parte de los atributos y métodos de otro objeto menor (HIJO). Por ejemplo: Persona -> Cienfífico
+Ejemplo:
+```js
+class Persona{
+  constructor(name, age){
+    this.name = name
+    this.age = age
+  }
+}
+class Programador extends Persona{
+  constructor(name, age, language){
+    super(name, age)
+    this.language = language
+  }
+}
+```
+
+## Polimosfismo
+Es la capacidad que se tiene para englobar una clase a distintas sub clases para diferenciar entre métodos. Por ejemplo: el objeto FIGURA tiene color, area, perimetro
+Pero para el área de cada figura se emplea diferentes cálculos. <br>
+Para cada figura se puede hacer la **sobrecarga de métodos** en JavaScript no es muy usado pues no es un lenguaje de tipado alto.
+<br> En Java un ejemplo de sobrecarga sería el siguiente.
+
+```Java
+public int suma(int a, int b){
+  return a + b;
+}
+
+public int suma(int a, int b, int c){
+  return a + b + c;
+}
+// ambas funciones devuelven la suma, pero depende la cantidad de elementos que se le pase podra retornar la suma
+```
