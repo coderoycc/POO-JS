@@ -165,3 +165,22 @@ class Clase{
   }
 }
 ```
+## Palabra INSTANCEOF
+* Nos permite saber de que instancia es un objeto
+```js
+//class ...
+  comprobar(obj){
+    if(obj instanceof Genrente){
+      console.log('Es gerente')
+    }
+    else if(obj instanceof Empleado){
+      console.log('Es empleado')
+    }
+    else if(obj instanceof Object){
+      console.log('Es un objeto')
+    }
+    // De menor a mayor Hijo Hijo Padre
+  }
+```
+* Cualquier objeto tiene por padre a **Object**
+
