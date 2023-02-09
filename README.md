@@ -130,3 +130,38 @@ public int suma(int a, int b, int c){
 }
 // ambas funciones devuelven la suma, pero depende la cantidad de elementos que se le pase podra retornar la suma
 ```
+## Palabra STATIC
+* El método static interactua directamente con la clase.
+* No puede ser llamado por objetos (instancias)
+* En un método
+```js
+//Dentro de una clase
+class Clase{
+  static saludar(){
+    console.log("")
+  }
+} 
+// Afuera
+Clase.saludar()
+```
+* En una variable de clase
+```js
+// Tambien se accede desde una clase y no desde una instancia
+class Clase{
+  static contador = 0;
+  constructor(){
+    Clase.contador++;
+  }
+}
+```
+* **NOTA:** los atributos no estáticos son los que se llenan desde un objeto y no se ponen static al inicio.
+* Para definir una objeto de tipo estático de solo lectura 
+```js
+class Clase{
+  ///...
+  static get MAX_OBJ(){
+    return "VALOR"
+    // Accesible desde la Clase
+  }
+}
+```
