@@ -8,6 +8,7 @@ let cadena = new String('Esta es una cadena')
 console.log(typeof cadena)
 // object
 ```
+
 Estas variables son tomadas como objetos porque cada tipo de dato tiene MÉTODOS como por ejemplo:
 ```js
 let cadena = "Nombre de mi Perrito: es Bellota"
